@@ -51,3 +51,240 @@ main.three-cols {
    grid-template-columns: 1fr 3fr 1fr;
    grid-template-areas: "left-cell article-cell right-cell";
 }
+
+main img {
+   border-radius: 5px;
+}
+
+/* TRANG CHU - HEADER */
+
+header {
+   grid-area: header-cell;
+   height: 100px;
+   background-image: url(images/header.png);
+   padding: 0 5px;
+   border: 1px solid #ccc7c8;
+   border-radius: 5px;
+   margin-bottom: 2px;
+}
+
+.header__img1 {
+   height: 100px;
+   position: absolute;
+   top: -30px;
+   animation: header-img1-move 3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes header-img1-move {
+   from {
+      left: 80%;
+   }
+   to {
+      left: 30%;
+   }
+}
+
+.header__img2 {
+   height: 70px;
+   position: absolute;
+   top: -5px;
+   animation: header-img2-move 3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes header-img2-move {
+   from {
+      left: 80%;
+   }
+   to {
+      left: 45%;
+   }
+}
+
+.header__img3 {
+   height: 80px;
+   position: absolute;
+   top: 0px;
+   animation: header-img3-move 3s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes header-img3-move {
+   from {
+      left: 80%;
+   }
+   to {
+      left: 63%;
+   }
+}
+
+nav {
+   grid-area: nav-cell;
+   margin-top: 20px;
+}
+
+.nav__link {
+   height: 20px;
+   text-decoration: none;
+   padding: 2px 4px;
+   margin: 3px;
+   border: 1px solid #fff;
+   font-size: 17px;
+   color: #ed4190;
+   background-color: #ffffff80;
+   text-align: center;
+   box-shadow: 0 0 3px 0 #00000066, 0 0 2px 0 #0000004d;
+}
+
+.nav__link:hover {
+   color: #fff;
+   background-color: #ed4190;
+}
+
+.nav__search-container {
+   float: right;
+   padding-top: 3px;
+}
+
+.nav__search-icon,
+.nav__shopping-cart-icon {
+   min-width: 30px;
+   text-align: center;
+   background-color: #cddc39;
+   padding: 4px;
+}
+
+.nav__search-icon {
+   color: #fff;
+}
+
+.nav__shopping-cart-icon {
+   color: #ed4190;
+}
+
+.nav__search-icon:hover,
+.nav__shopping-cart-icon:hover {
+   cursor: pointer;
+}
+
+/* TRANG CHU - MAIN */
+
+.main__content {
+   display: grid;
+   grid-template-columns: auto;
+}
+
+h1,
+h2,
+h3 {
+   font-family: "Open Sans", sans-serif;
+   font-weight: 300;
+   color: #f90b6d;
+}
+
+h1 {
+   font-size: 28px;
+   line-height: 34px;
+   text-align: center;
+   text-transform: uppercase;
+   margin: 12px 0 16px;
+}
+
+h1::after {
+   position: relative;
+   left: 50%;
+   content: "";
+   display: block;
+   width: 200px;
+   height: 3px;
+   transform: skewX(-12deg) translateX(-50%);
+   background: radial-gradient(#cddc39, #fff);
+   margin: 12px 0 16px;
+}
+
+h2 {
+   font-size: 24px;
+   line-height: 28px;
+   margin: 5px 0 10px;
+}
+
+h3 {
+   font-size: 20px;
+   line-height: 24px;
+   margin: 5px 0 10px;
+}
+
+.detail {
+   padding: 0 5px;
+   text-align: justify;
+   margin-bottom: 5px;
+}
+
+.main__img-left img,
+.main__img-left video {
+   float: left;
+   width: 30%;
+}
+
+.main__img-left .detail {
+   float: right;
+   width: 69%;
+}
+
+.main__img-right img,
+.main__img-right video {
+   float: right;
+   width: 30%;
+}
+
+.main__img-right .detail {
+   float: left;
+   width: 69%;
+}
+
+.main__two-sides .col-list {
+   column-count: 2;
+}
+
+.col-list h3 {
+   break-before: column;
+}
+
+.main__order .order-step {
+   margin-bottom: 5px;
+   width: 100%;
+   text-align: center;
+}
+
+.main__order .step-card {
+   display: inline-block;
+   width: 24%;
+   padding-top: 5px;
+   border: 1px solid #ed4190;
+   border-radius: 5px;
+}
+
+/* TRANG CHU - FOOTER */
+footer {
+   grid-area: footer-cell;
+   margin-top: 2px;
+   padding: 0 5px;
+   border: 1px solid #ccc7c8;
+   border-radius: 5px;
+   color: #000;
+   text-align: center;
+}
+
+.footer__social-icon {
+   text-decoration: none;
+   color: #ed4190;
+}
+
+.gotop {
+   position: fixed;
+   right: 10px;
+   bottom: 5px;
+   padding: 10px;
+   z-index: 100;
+}
