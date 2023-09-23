@@ -1,7 +1,7 @@
 /* GLOBAL */
 
 body {
-   max-width: 1024px;
+   width: 1024px;
    font-family: Arial, Helvetica, sans-serif;
    font-size: 1.2em;
    margin: 0 auto;
@@ -52,7 +52,7 @@ main.three-cols {
    grid-template-areas: "left-cell article-cell right-cell";
 }
 
-main img {
+.main__round-img {
    border-radius: 5px;
 }
 
@@ -263,6 +263,41 @@ h3 {
    padding-top: 5px;
    border: 1px solid #ed4190;
    border-radius: 5px;
+}
+
+/* SAN PHAM - MAIN */
+.product {
+   display: flex;
+   margin: 0;
+   padding: 0;
+}
+
+.product__card {
+   display: flex;
+   flex: 1;
+   flex-direction: column;
+   border: 1px solid #dbd7d9;
+   border-radius: 5px;
+   margin: 3px;
+   background: linear-gradient(to top, #cddc39 0%, transparent 10%);
+}
+
+.product__card img {
+   display: block;
+   margin: auto;
+}
+
+.product__card h2 {
+   text-align: center;
+}
+
+.product__card .add-to-cart {
+   display: block;
+   width: 100%;
+   padding: 3px;
+   margin: 4px;
+   text-align: center;
+   line-height: 2;
 }
 
 /* TRANG CHU - FOOTER */
