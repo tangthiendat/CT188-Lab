@@ -1,107 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Liên hệ</title>
-      <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
-   </head>
-   <body>
-      <header>
-         <a href="trangchu.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
-         <nav>
-            <a href="trangchu.html">Trang chủ</a>
-            <a href="gioithieu.html">Giới thiệu</a>
-            <a href="sanpham.html">Sản phẩm</a>
-            <a href="tintuc.html">Tin tức</a>
-            <a href="dangnhap.html">Đăng nhập</a>
-            <a href="dangky.html">Đăng ký</a>
-            <a href="lienhe.html">Liên hệ</a>
-         </nav>
-      </header>
-      <main>
-         <h1>Liên hệ</h1>
-         <img src="images/lienhe/check-in.png" alt="check-in" />
-         <h1>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ</h1>
-         <p>
-            Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu mẫu bên dưới. Xin
-            cám ơn.
-         </p>
-         <fieldset>
-            <legend>Góp ý</legend>
-            <form action="contact.php" method="post" enctype="application/x-www-form-urlencoded">
-               <table>
-                  <tr>
-                     <td>
-                        <label for="name">Họ Tên:</label>
-                     </td>
-                     <td>
-                        <input
-                           type="text"
-                           name="name"
-                           id="name"
-                           placeholder="Vui lòng nhập họ tên của bạn"
-                        />
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <label for="email">Email:</label>
-                     </td>
-                     <td>
-                        <input
-                           type="text"
-                           name="email"
-                           id="email"
-                           placeholder="Vui lòng nhập địa chỉ email"
-                        />
-                     </td>
-                  </tr>
-                  <tr>
-                     <td>
-                        <label for="topic">Chủ đề:</label>
-                     </td>
-                     <td>
-                        <select name="topic" id="topic" size="1">
-                           <option value="products-services">Về Sản Phẩm/Dịch Vụ</option>
-                           <option value="member">Về Ưu Đãi Thành Viên</option>
-                           <option value="hiring">Về Tin Tuyển Dụng</option>
-                        </select>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="2">
-                        <label for="content">Nội dung:</label>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="2">
-                        <textarea
-                           name="content"
-                           id="content"
-                           cols="50"
-                           rows="7"
-                           placeholder="Nội dung cần liên hệ"
-                        ></textarea>
-                     </td>
-                  </tr>
-                  <tr>
-                     <td colspan="2" align="center">
-                        <input type="submit" value="Gửi" />
-                     </td>
-                  </tr>
-               </table>
-            </form>
-         </fieldset>
-      </main>
-      <footer>
-         <p>
-            &copy; 2023 Bản quyền thuộc về FreeezeVN.
-            <a href="https://www.facebook.com/">facebook</a>
-            <a href="https://www.twitter.com/">twitter</a>
-            <a href="https://www.pinterest.com/">pinterest</a>
-            <a href="#logo">Về Đầu Trang</a>
-         </p>
-      </footer>
-   </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Liên hệ</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
+        <!-- FONT API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Marko+One&family=Open+Sans:wght@300&display=swap"
+            rel="stylesheet" />
+        <!-- Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <img class="header__img1" src="images/header-img1.png" alt="header-img1" />
+            <img class="header__img2" src="images/header-img2.png" alt="header-img2" />
+            <img class="header__img3" src="images/header-img3.png" alt="header-img3" />
+            <a href="trangchu.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
+            <nav>
+                <a class="nav__link" href="trangchu.html">Trang chủ</a>
+                <a class="nav__link" href="gioithieu.html">Giới thiệu</a>
+                <a class="nav__link" href="sanpham.html">Sản phẩm</a>
+                <a class="nav__link" href="tintuc.html">Tin tức</a>
+                <a class="nav__link" href="dangnhap.html">Đăng nhập</a>
+                <a class="nav__link" href="dangky.html">Đăng ký</a>
+                <a class="nav__link" href="lienhe.html">Liên hệ</a>
+
+                <div class="nav__search-container">
+                    <form action="#" method="get">
+                        <div class="nav__input-container">
+                            <input
+                                type="text"
+                                name="search"
+                                id="search"
+                                class="nav__search-input"
+                                placeholder="Nhập nội dung cần tìm..." />
+                            <i class="fa fa-search nav__search-icon icon-white"></i>
+                            <i class="fa fa-shopping-cart nav__shopping-cart-icon icon-pink"></i>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </header>
+        <main class="one-col">
+            <h1>Liên hệ</h1>
+            <!-- <img src="images/lienhe/check-in.png" alt="check-in" /> -->
+
+            <p>
+                <i class="fa fa-map-marker-alt icon-pink"></i>
+                <strong>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ:</strong> Nếu bạn có góp ý, vui lòng liên hệ bằng thư
+                điện tử hoặc sử dụng biểu mẫu bên dưới. Xin cám ơn.
+            </p>
+            <fieldset class="form-container">
+                <h1>Góp ý</h1>
+                <form action="contact.php" method="post" enctype="application/x-www-form-urlencoded">
+                    <table align="center">
+                        <tr>
+                            <td>
+                                <label for="name"><i class="fa fa-user icon-white"></i></label>
+                            </td>
+                            <td>
+                                <input type="text" name="name" id="name" placeholder="Vui lòng nhập họ tên của bạn" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email"><i class="fa fa-envelope icon-white"></i></label>
+                            </td>
+                            <td>
+                                <input type="text" name="email" id="email" placeholder="Vui lòng nhập địa chỉ email" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="topic"><i class="fa fa-list icon-white"></i></label>
+                            </td>
+                            <td>
+                                <select name="topic" id="topic" size="1">
+                                    <option value="products-services">Về Sản Phẩm/Dịch Vụ</option>
+                                    <option value="member">Về Ưu Đãi Thành Viên</option>
+                                    <option value="hiring">Về Tin Tuyển Dụng</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="content"><i class="fa fa-sticky-note icon-white"></i></label>
+                            </td>
+                            <td>
+                                <textarea
+                                    name="content"
+                                    id="content"
+                                    cols="50"
+                                    rows="7"
+                                    placeholder="Nội dung cần liên hệ"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="Gửi" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </fieldset>
+        </main>
+        <footer>
+            <p>
+                &copy; 2023 Bản quyền thuộc về FreeezeVN.
+                <a href="https://www.facebook.com/" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com/" class="footer__social-icon"><i class="fab fa-pinterest"></i></a>
+                <a href="#logo" class="gotop"> <img src="images/top.png" alt="" width="60" /></a>
+            </p>
+        </footer>
+    </body>
 </html>
