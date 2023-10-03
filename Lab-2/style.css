@@ -312,8 +312,13 @@ h3 {
 }
 
 /* LIEN HE */
-.form-container {
-    border: none;
+.contact-form table {
+    margin: 10px auto;
+}
+
+/* DANG NHAP */
+.login-form table {
+    margin: 10px auto;
 }
 
 /* GIOI THIEU */

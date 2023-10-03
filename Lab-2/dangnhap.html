@@ -5,34 +5,67 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Đăng nhập</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
+        <!-- FONT API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Marko+One&family=Open+Sans:wght@400&display=swap"
+            rel="stylesheet" />
+        <!-- Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
+            <img class="header__img1" src="images/header-img1.png" alt="header-img1" />
+            <img class="header__img2" src="images/header-img2.png" alt="header-img2" />
+            <img class="header__img3" src="images/header-img3.png" alt="header-img3" />
             <a href="trangchu.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
             <nav>
-                <a href="trangchu.html">Trang chủ</a>
-                <a href="gioithieu.html">Giới thiệu</a>
-                <a href="sanpham.html">Sản phẩm</a>
-                <a href="tintuc.html">Tin tức</a>
-                <a href="dangnhap.html">Đăng nhập</a>
-                <a href="dangky.html">Đăng ký</a>
-                <a href="lienhe.html">Liên hệ</a>
+                <a class="nav__link" href="trangchu.html">Trang chủ</a>
+                <a class="nav__link" href="gioithieu.html">Giới thiệu</a>
+                <a class="nav__link" href="sanpham.html">Sản phẩm</a>
+                <a class="nav__link" href="tintuc.html">Tin tức</a>
+                <a class="nav__link" href="dangnhap.html">Đăng nhập</a>
+                <a class="nav__link" href="dangky.html">Đăng ký</a>
+                <a class="nav__link" href="lienhe.html">Liên hệ</a>
+
+                <div class="nav__search-container">
+                    <form action="#" method="get">
+                        <div class="nav__input-container">
+                            <input
+                                type="text"
+                                name="search"
+                                id="search"
+                                class="nav__search-input"
+                                placeholder="Nhập nội dung cần tìm..." />
+                            <i class="fa fa-search nav__search-icon icon-white"></i>
+                            <i class="fa fa-shopping-cart nav__shopping-cart-icon icon-pink"></i>
+                        </div>
+                    </form>
+                </div>
             </nav>
         </header>
 
-        <main>
-            <fieldset>
-                <legend><b>ĐĂNG NHẬP</b></legend>
-                <form action="login.php" method="post" enctype="application/x-www-form-urlencoded">
+        <main class="one-col">
+            <article>
+                <h1>Đăng nhập</h1>
+                <form class="login-form" action="login.php" method="post" enctype="application/x-www-form-urlencoded">
                     <table>
                         <tr>
-                            <td colspan="2" align="center">
+                            <td colspan="2">
                                 <img src="images/dangnhap/userlogin.png" alt="login" width="250" height="250" />
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="email"><b>Email</b></label>
+                                <label for="email"><i class="fa fa-envelope icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="text" name="email" id="email" placeholder="Nhập email" />
@@ -40,43 +73,37 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="psw"><b>Mật khẩu</b></label>
+                                <label for="psw"><i class="fa fa-key icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="password" name="psw" id="psw" placeholder="Nhập mật khẩu" />
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="center">
-                                <input type="submit" value="Đăng nhập" />
-                                <input type="reset" value="Hủy" />
+                            <td colspan="2">
+                                <label for="remember"> Bạn quên <a href="#">Mật Khẩu?</a> </label>
+                                <input type="checkbox" name="remember" id="remember" />
+                                <label for="remember"> Ghi nhớ cho lần đăng nhập sau </label>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <label for="remember">
-                                    <b> Bạn quên <a href="#">Mật Khẩu?</a> </b>
-                                </label>
-                                <input type="checkbox" name="remember" id="remember" />
-                                <label for="remember">
-                                    <b>Ghi nhớ cho lần đăng nhập sau</b>
-                                </label>
+                                <input type="submit" value="Đăng nhập" />
+                                <input type="reset" value="Hủy" />
                             </td>
                         </tr>
                     </table>
                 </form>
-            </fieldset>
+            </article>
         </main>
 
         <footer>
             <p>
-                <b>
-                    &copy; 2023 Bản quyền thuộc về FreeezeVN.
-                    <a href="https://www.facebook.com/">facebook</a>
-                    <a href="https://www.twitter.com/">twitter</a>
-                    <a href="https://www.pinterest.com/">pinterest</a>
-                    <a href="#logo">Về Đầu Trang</a>
-                </b>
+                &copy; 2023 Bản quyền thuộc về FreeezeVN.
+                <a href="https://www.facebook.com/" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com/" class="footer__social-icon"><i class="fab fa-pinterest"></i></a>
+                <a href="#logo" class="gotop"> <img src="images/top.png" alt="" width="60" /></a>
             </p>
         </footer>
     </body>
