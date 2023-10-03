@@ -25,7 +25,6 @@ main {
 }
 
 aside {
-    grid-area: right-cell;
     color: #000;
     padding: 5px;
     margin: 2px;
@@ -55,6 +54,17 @@ main.three-cols {
 
 .main__round-img {
     border-radius: 5px;
+}
+
+/* article.main__content {
+    display: grid;
+    grid-template-columns: auto;
+} */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 /* TRANG CHU - HEADER */
@@ -304,6 +314,16 @@ h3 {
 /* LIEN HE */
 .form-container {
     border: none;
+}
+
+/* GIOI THIEU */
+main.two-cols-left aside {
+    grid-area: right-cell;
+}
+
+/* TIN TUC */
+main.two-cols-right aside {
+    grid-area: left-cell;
 }
 
 /* TRANG CHU - FOOTER */
