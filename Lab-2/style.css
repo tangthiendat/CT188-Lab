@@ -56,11 +56,6 @@ main.three-cols {
     border-radius: 5px;
 }
 
-/* article.main__content {
-    display: grid;
-    grid-template-columns: auto;
-} */
-
 .clearfix::after {
     content: "";
     clear: both;
@@ -318,6 +313,11 @@ h3 {
 
 /* DANG NHAP */
 .login-form table {
+    margin: 10px auto;
+}
+
+/* DANG KY */
+.register-form table {
     margin: 10px auto;
 }
 

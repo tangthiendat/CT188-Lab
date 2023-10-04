@@ -5,28 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Đăng Ký Thành Viên</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
+        <!-- FONT API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Marko+One&family=Open+Sans:wght@400&display=swap"
+            rel="stylesheet" />
+        <!-- Fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <header>
+            <img class="header__img1" src="images/header-img1.png" alt="header-img1" />
+            <img class="header__img2" src="images/header-img2.png" alt="header-img2" />
+            <img class="header__img3" src="images/header-img3.png" alt="header-img3" />
             <a href="trangchu.html"><img id="logo" src="images/logo.png" alt="logo" /></a>
             <nav>
-                <a href="trangchu.html">Trang chủ</a>
-                <a href="gioithieu.html">Giới thiệu</a>
-                <a href="sanpham.html">Sản phẩm</a>
-                <a href="tintuc.html">Tin tức</a>
-                <a href="dangnhap.html">Đăng nhập</a>
-                <a href="dangky.html">Đăng ký</a>
-                <a href="lienhe.html">Liên hệ</a>
+                <a class="nav__link" href="trangchu.html">Trang chủ</a>
+                <a class="nav__link" href="gioithieu.html">Giới thiệu</a>
+                <a class="nav__link" href="sanpham.html">Sản phẩm</a>
+                <a class="nav__link" href="tintuc.html">Tin tức</a>
+                <a class="nav__link" href="dangnhap.html">Đăng nhập</a>
+                <a class="nav__link" href="dangky.html">Đăng ký</a>
+                <a class="nav__link" href="lienhe.html">Liên hệ</a>
+
+                <div class="nav__search-container">
+                    <form action="#" method="get">
+                        <div class="nav__input-container">
+                            <input
+                                type="text"
+                                name="search"
+                                id="search"
+                                class="nav__search-input"
+                                placeholder="Nhập nội dung cần tìm..." />
+                            <i class="fa fa-search nav__search-icon icon-white"></i>
+                            <i class="fa fa-shopping-cart nav__shopping-cart-icon icon-pink"></i>
+                        </div>
+                    </form>
+                </div>
             </nav>
         </header>
-        <main>
-            <fieldset>
-                <legend><b>ĐĂNG KÝ</b></legend>
-                <form action="#" method="post" enctype="multipart/form-data">
+        <main class="one-col">
+            <article>
+                <h1>Đăng ký</h1>
+                <form class="register-form" action="#" method="post" enctype="multipart/form-data">
                     <table>
                         <tr>
                             <td>
-                                <label for="email"><b>Email</b></label>
+                                <label for="email"><i class="fa fa-envelope icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="text" name="email" id="email" placeholder="Vui lòng nhập email" />
@@ -34,7 +67,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="psw1"><b>Mật Khẩu</b></label>
+                                <label for="psw1"><i class="fa fa-key icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="password" name="psw1" id="psw1" placeholder="Vui lòng nhập mật khẩu" />
@@ -42,7 +75,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="psw2"><b>Nhập lại mật khẩu</b></label>
+                                <label for="psw2"><i class="fa fa-key icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="text" name="psw2" id="psw2" placeholder="Vui lòng nhập mật khẩu" />
@@ -50,20 +83,20 @@
                         </tr>
                         <tr>
                             <td>
-                                <label for="memberType"><b>Cấp độ thành viên</b></label>
+                                <label for="memberType"><i class="fa fa-users icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="radio" name="memberType" id="silver" value="Silver" />
-                                <label for="silver"><b>Bạc</b></label>
+                                <label for="silver">Bạc</label>
                                 <input type="radio" name="memberType" id="gold" value="Gold" />
-                                <label for="gold"><b>Vàng</b></label>
+                                <label for="gold">Vàng</label>
                                 <input type="radio" name="memberType" id="platinum" value="Platinum" />
-                                <label for="platinum"><b>Bạch Kim</b></label>
+                                <label for="platinum">Bạch Kim</label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <label for="avatar"><b>Ảnh đại diện</b></label>
+                                <label for="avatar"><i class="fa fa-file-image icon-white"></i></label>
                             </td>
                             <td>
                                 <input type="file" name="avatar" id="avatar" />
@@ -71,10 +104,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <b>
-                                    Thông qua việc tạo tài khoản, bạn đồng ý với
-                                    <a href="#"> Điều khoản & Quyền riêng tư của chúng tôi </a>
-                                </b>
+                                Thông qua việc tạo tài khoản, bạn đồng ý với
+                                <a href="#"> Điều khoản & Quyền riêng tư của chúng tôi </a>
                             </td>
                         </tr>
                         <tr>
@@ -85,17 +116,15 @@
                         </tr>
                     </table>
                 </form>
-            </fieldset>
+            </article>
         </main>
         <footer>
             <p>
-                <b>
-                    &copy; 2023 Bản quyền thuộc về FreeezeVN.
-                    <a href="https://www.facebook.com/">facebook</a>
-                    <a href="https://www.twitter.com/">twitter</a>
-                    <a href="https://www.pinterest.com/">pinterest</a>
-                    <a href="#logo">Về Đầu Trang</a>
-                </b>
+                &copy; 2023 Bản quyền thuộc về FreeezeVN.
+                <a href="https://www.facebook.com/" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com/" class="footer__social-icon"><i class="fab fa-pinterest"></i></a>
+                <a href="#logo" class="gotop"> <img src="images/top.png" alt="" width="60" /></a>
             </p>
         </footer>
     </body>
